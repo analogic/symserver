@@ -1,0 +1,19 @@
+/var/www/app/logs/*.log {
+    monthly
+    missingok
+    rotate 4
+    compress
+    sharedscripts
+    copytruncate
+    size 100M
+}
+
+/var/www/var/logs/*.log {
+    monthly
+    missingok
+    rotate 4
+    compress
+    sharedscripts
+    copytruncate
+    size 100M
+}
