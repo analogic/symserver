@@ -10,4 +10,5 @@ Complete web server for Symfony dev
 ```
 $ docker run --name symserver \
       -v /symfony/project/dir:/var/www \
+      -v /data/logs:/var/log/nginx \
       analogic/symserver
