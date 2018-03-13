@@ -1,0 +1,1 @@
+/var/www/var/spool/default IN_CREATE,IN_ONLYDIR,IN_NO_LOOP sudo -u www-data /var/www/bin/console swiftmailer:spool:send -e prod
