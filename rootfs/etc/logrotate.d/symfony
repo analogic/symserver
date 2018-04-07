@@ -8,7 +8,7 @@
     size 100M
 }
 
-/var/www/var/logs/*.log {
+/var/www/var/log/*.log {
     monthly
     missingok
     rotate 4
