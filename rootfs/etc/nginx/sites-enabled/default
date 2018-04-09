@@ -70,6 +70,20 @@
 
             internal;
         }
+        
+        location ~ ^/_sub/(\w+)$ {
+          nchan_subscriber;
+          nchan_channel_id "$1";
+          nchan_websocket_ping_interval 5;
+        }
+        
+        location ~ ^/_pub/(\w+)$ {
+          allow 127.0.0.1;
+          deny all;
+          nchan_publisher;
+          nchan_channel_id "$1";
+          nchan_store_messages off;
+        }
 
         error_log /var/log/nginx/error.log;
         access_log /var/log/nginx/access.log proxyfied;
