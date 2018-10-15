@@ -19,7 +19,7 @@ RUN apt-get install -y dirmngr wget apt-transport-https && \
     apt-get install -y --no-install-recommends --reinstall git \
             php7.2-fpm php7.2-cli php7.2-json php7.2-mysql php7.2-sqlite3 php7.2-curl php7.2-zip \
             php7.2-xml php7.2-imap php7.2-mbstring php7.2-mbstring php7.2-bcmath php7.2-soap \
-            php7.2-intl php-apcu \
+            php7.2-intl php-apcu php-gd \
             nginx-light libnginx-mod-nchan ca-certificates sudo busybox-syslogd cron nano locales \
             ssmtp logrotate unzip && \
 
