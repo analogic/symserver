@@ -1,7 +1,7 @@
 Complete web server for Symfony dev
 ===================================
 
-- PHP 7.2
+- PHP 7.4
 - nginx
 - crontab (logrotate and other...)
 - ssmtp (crontab errors sending)
