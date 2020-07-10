@@ -17,15 +17,15 @@ RUN apt-get install -y dirmngr wget apt-transport-https && \
     apt-get upgrade -y && \
 
     apt-get install -y --no-install-recommends --reinstall git \
-            php7.2-fpm php7.2-cli php7.2-json php7.2-mysql php7.2-sqlite3 php7.2-curl php7.2-zip \
-            php7.2-xml php7.2-imap php7.2-mbstring php7.2-mbstring php7.2-bcmath php7.2-soap \
-            php7.2-intl php-apcu php-gd \
+            php7.4-fpm php7.4-cli php7.4-json php7.4-mysql php7.4-sqlite3 php7.4-curl php7.4-zip \
+            php7.4-xml php7.4-imap php7.4-mbstring php7.4-mbstring php7.4-bcmath php7.4-soap \
+            php7.4-intl php-apcu php-gd \
             nginx-light libnginx-mod-nchan ca-certificates sudo busybox-syslogd cron nano locales \
             ssmtp logrotate unzip && \
 
-    sed 's/listen = \/run\/php\/php7.2-fpm\.sock/listen = \/var\/run\/php-fpm.sock/' -i /etc/php/7.2/fpm/pool.d/www.conf && \
-    sed 's/pid = \/run\/php\/php7.2-fpm\.pid/pid = \/var\/run\/php-fpm.pid/' -i /etc/php/7.2/fpm/php-fpm.conf && \
-    echo "expose_php = off" >> /etc/php/7.2/fpm/php.ini && \
+    sed 's/listen = \/run\/php\/php7.4-fpm\.sock/listen = \/var\/run\/php-fpm.sock/' -i /etc/php/7.4/fpm/pool.d/www.conf && \
+    sed 's/pid = \/run\/php\/php7.4-fpm\.pid/pid = \/var\/run\/php-fpm.pid/' -i /etc/php/7.4/fpm/php-fpm.conf && \
+    echo "expose_php = off" >> /etc/php/7.4/fpm/php.ini && \
 
     apt-get remove -y dirmngr wget apt-transport-https && apt-get autoremove -y
 
