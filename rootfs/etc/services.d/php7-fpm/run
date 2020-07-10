@@ -1,4 +1,4 @@
 #!/usr/bin/execlineb -P
 
 with-contenv
-/usr/sbin/php-fpm7.2 --nodaemonize
+/usr/sbin/php-fpm7.4 --nodaemonize
